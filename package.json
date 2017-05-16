@@ -1,0 +1,29 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmallols/wedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmallols/wedding/issues"
+  },
+  "homepage": "https://github.com/rmallols/wedding#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "html-loader": "^0.4.5",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

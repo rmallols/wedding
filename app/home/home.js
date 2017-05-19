@@ -1,6 +1,6 @@
 import homeHtml from './home.html';
 import './home.less';
 
-export function bootHome(rootNode) {
+export function nagivateToHome(rootNode) {
   rootNode.innerHTML = homeHtml;
 }

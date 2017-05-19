@@ -1,12 +1,11 @@
-import appHtml from './app.html';
+import appHtml              from './app.html';
+import { bootRouter }       from './router/router';
+import { bootMenu }         from './menu/menu';
 import './app.less';
-import { bootMenu } from './menu/menu';
-import { bootHome } from './home/home';
 
 export function bootApp(rootNode) {
   rootNode.innerHTML = appHtml;
   let menuNode = document.querySelector('menu');
-  let homeNode = document.querySelector('home');
+  bootRouter();
   bootMenu(menuNode);
-  bootHome(homeNode);
 }

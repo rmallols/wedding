@@ -8,6 +8,7 @@ export function bootMenu(rootNode) {
     let innerMenuNode = rootNode.querySelector('[data-inner-menu]');
     manageOnMenuOpen(rootNode, innerMenuNode);
     manageOnMenuClose(rootNode, innerMenuNode);
+    manageOnViewRequested(rootNode);
 }
 
 function manageOnMenuOpen(rootNode, innerMenuNode) {
@@ -23,5 +24,12 @@ function manageOnMenuClose(rootNode, innerMenuNode) {
     menuCloseNode.addEventListener('click', () => {
        isMenuVisible = false;
        innerMenuNode.classList.remove('is-visible');
+    });
+}
+
+function manageOnViewRequested(rootNode) {
+    let familyLink = rootNode.querySelector('[data-family]');
+    familyLink.addEventListener('click', () => {
+        history.pushState(null, 'Family', "#/family");
     });
 }

@@ -4,15 +4,24 @@ import './menu.less';
 let isMenuVisible = false;
 
 export function bootMenu(rootNode) {
-  rootNode.innerHTML = menuHtml;
-  manageMenuVisibility(rootNode);
+    rootNode.innerHTML = menuHtml;
+    let innerMenuNode = rootNode.querySelector('[data-inner-menu]');
+    manageOnMenuOpen(rootNode, innerMenuNode);
+    manageOnMenuClose(rootNode, innerMenuNode);
 }
 
-function manageMenuVisibility(rootNode) {
-    let innerMenuNode = rootNode.querySelector('[data-inner-menu]');
-    let menuToggleNode = rootNode.querySelector('[data-menu-toggle]');
-    menuToggleNode.addEventListener('click', () => {
-       isMenuVisible = !isMenuVisible;
-       innerMenuNode.classList.toggle('is-visible');
+function manageOnMenuOpen(rootNode, innerMenuNode) {
+    let menuOpenNode = rootNode.querySelector('[data-menu-open]');
+    menuOpenNode.addEventListener('click', () => {
+       isMenuVisible = true;
+       innerMenuNode.classList.add('is-visible');
+    });
+}
+
+function manageOnMenuClose(rootNode, innerMenuNode) {
+    let menuCloseNode = rootNode.querySelector('[data-menu-close]');
+    menuCloseNode.addEventListener('click', () => {
+       isMenuVisible = false;
+       innerMenuNode.classList.remove('is-visible');
     });
 }

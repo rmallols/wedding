@@ -1,14 +1,19 @@
+@transition-speed: 300ms;
+@powder-blue: #D1E8EE;
+@ghostly-lullaby: #F6E7F5;
+@baby-pink: #FFD3E0;
+@ice-cream: #FEFAF6;
+@nena-gray: #D6DFE2;
+
 body {
     margin: 0;
     font-size: 16px;
     color: #666;
 }
 
-@powder-blue: #D1E8EE;
-@ghostly-lullaby: #F6E7F5;
-@baby-pink: #FFD3E0;
-@ice-cream: #FEFAF6;
-@nena-gray: #D6DFE2;
+.transition_left {
+    transition: left @transition-speed;
+}
 
 .bg_blue {
   background-color: @powder-blue;
